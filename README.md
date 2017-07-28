@@ -24,5 +24,7 @@
 
 我們要先在頁面 Code Behind 取得這個頁面當時使用的 ViewModel，並且將 ViewModel 的委派方法物件與 Code Behind 內的方法綁定在一起，這樣，我們就可以在 ViewModel 內，執行 Code Behind 的方法。
 
+## XFBindProp 專案，將 Code Behind 程式碼，包裹在可綁定屬性中
 
+在這個專案中，會產生兩個客製化控制項，一個是 ContentPage，另一個是 Button，接著，我們會在這兩個自訂控制項中，分別加入可綁定屬性。然後，便可以透過 ViewModel 來變更這些綁定於 View 中的 .NET Property，以便呼叫相關 Code Behind 程式碼。
 

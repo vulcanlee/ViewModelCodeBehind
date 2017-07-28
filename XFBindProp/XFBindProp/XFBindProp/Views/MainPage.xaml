@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<customControl:MyContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             
+             xmlns:customControl="clr-namespace:XFBindProp.CustomControls"
+             
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="XFBindProp.Views.MainPage"
+             Title="使用可綁定屬性包裝Code Behind 程式碼"
+             BackgroundColor="{DynamicResource DynamicResourceColor}"
+                             
+             ChangeBackgroudColor="{Binding NeedChangeBackground}"
+             >
+
+    <customControl:MyContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="PageDynamicResourceColor">#e0d87d</Color>
+        </ResourceDictionary>
+    </customControl:MyContentPage.Resources>
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="{Binding Title}" />
+        <Button Text="變更顏色"
+                Command="{Binding ChangeColorCommand}"/>
+        <customControl:MyButton Text="變更顏色(頁面)"
+                                ChangeBackgroudColor="{Binding NeedChangePageBackground}"
+                                BackgroundColor="{DynamicResource PageDynamicResourceColor}"
+                                Command="{Binding ChangePageColorCommand}"/>
+    </StackLayout>
+
+</customControl:MyContentPage>
