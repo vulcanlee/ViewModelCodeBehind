@@ -28,3 +28,7 @@
 
 在這個專案中，會產生兩個客製化控制項，一個是 ContentPage，另一個是 Button，接著，我們會在這兩個自訂控制項中，分別加入可綁定屬性。然後，便可以透過 ViewModel 來變更這些綁定於 View 中的 .NET Property，以便呼叫相關 Code Behind 程式碼。
 
+## XFAttProp 專案，將 Code Behind 程式碼，包裹在附加屬性中
+
+在這個專案中，會產生兩個附加屬性，一個是 ChangeBackgroundColor.ChangeAppColor，另一個是 ChangeBackgroundColor.ChangePageColor，接著，我們會將這兩個附加屬性加入到 ContentPage / Button。然後，便可以透過 ViewModel 來變更這些綁定於 View 中的 .NET Property，以便呼叫相關 Code Behind 程式碼。
+
