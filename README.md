@@ -36,4 +36,8 @@
 
 在這個專案中，使用的是 Forms 的行為來達到執行 Code Behind 程式碼的需求，因此，在這裡，會產生兩個行為，一旦當這個行為被加入到 XAML 中，就會變更頁面背景顏色；為了要能夠讓這個行為可以動態的加入到 XAML 中，所以，我們另外定義了兩個附加屬性，透過這個附加屬性與ViewModel進行資料綁定，便可以透過 ViewModel 的 .NET Property 的值變動，動態的來將相對應的行為加入到 XAML 內，而在該行為中，經會執行相關必須要 Code Behind 需要執行的程式碼。
 
+## XFTriggerEvent 專案，將 Code Behind 程式碼，包裹在觸發動作中
+
+在這個專案中，會將要使用的 Code Behind 程式碼使用 XAML 的觸發 Trigger 包裹起來；在這裡，我們會產生兩個觸發動作 (TriggerAction)，並且搭配著資料綁定觸發模式，一旦 ViewModel 所指定的資料有異動，並且符合 XAML 定義的觸發條件，這個時候，在 XAML 中所指定的觸發進入動作物件(Trigger.EnterActions)的 Invoke 方法將會執行，所以，透過這樣的模式，我們可以將 Code Behind 商業處裡邏輯，包裝在觸發類別中。
+
 
