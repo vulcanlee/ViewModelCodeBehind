@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             
+             xmlns:behavior="clr-namespace:XFFormBehavior.Behaviors"
+             
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="XFFormBehavior.Views.MainPage"
+             Title="使用Forms行為包裝Code Behind 程式碼"
+             BackgroundColor="{DynamicResource DynamicResourceColor}"
+             behavior:ChangeColorBehavior.ChangeColor="{Binding NeedChangeBackground}"
+             >
+
+    <!--在這裡，藉由附加屬性的綁定 (NeedChangeBackground) 值異動，動態的加入與移除指定的行為，達到要執行的 Code Behind 程式碼-->
+    <!--也就是說，要變更顏色資源的程式碼，不是在附加屬性中運行，而是在行為中執行-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="PageDynamicResourceColor">#e0d87d</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="{Binding Title}" />
+        <Button Text="變更顏色"
+                Command="{Binding ChangeColorCommand}"/>
+        <Button Text="變更顏色(頁面)"
+                behavior:ChangePageColorBehavior.ChangePageColor="{Binding NeedChangePageBackground}"
+                BackgroundColor="{DynamicResource PageDynamicResourceColor}"
+                Command="{Binding ChangePageColorCommand}"/>
+    </StackLayout>
+
+</ContentPage>

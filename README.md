@@ -32,3 +32,8 @@
 
 在這個專案中，會產生兩個附加屬性，一個是 ChangeBackgroundColor.ChangeAppColor，另一個是 ChangeBackgroundColor.ChangePageColor，接著，我們會將這兩個附加屬性加入到 ContentPage / Button。然後，便可以透過 ViewModel 來變更這些綁定於 View 中的 .NET Property，以便呼叫相關 Code Behind 程式碼。
 
+## XFFormBehavior 專案，將 Code Behind 程式碼，包裹在行為中
+
+在這個專案中，使用的是 Forms 的行為來達到執行 Code Behind 程式碼的需求，因此，在這裡，會產生兩個行為，一旦當這個行為被加入到 XAML 中，就會變更頁面背景顏色；為了要能夠讓這個行為可以動態的加入到 XAML 中，所以，我們另外定義了兩個附加屬性，透過這個附加屬性與ViewModel進行資料綁定，便可以透過 ViewModel 的 .NET Property 的值變動，動態的來將相對應的行為加入到 XAML 內，而在該行為中，經會執行相關必須要 Code Behind 需要執行的程式碼。
+
+
