@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                        xmlns:prism="clr-namespace:Prism.Unity;assembly=Prism.Unity.Forms"
+                        x:Class="XFDelegate.App">
+
+  <prism:PrismApplication.Resources>
+    <ResourceDictionary>
+      <!--宣告一個顏色資源，可以使用 Code Behind 使用動態資源方式來進行變更此顏色-->
+      <Color x:Key="DynamicResourceColor">#ccffcc</Color>
+    </ResourceDictionary>
+  </prism:PrismApplication.Resources>
+
+</prism:PrismApplication>

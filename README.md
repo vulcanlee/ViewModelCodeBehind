@@ -17,3 +17,12 @@
 下圖為當按下的 `變更顏色(頁面)` 按鈕之後，該按鈕背景顏色會變色的螢幕截圖
 
 ![Xamarin Code Behind](Screenshot/CodeBehind3.png)
+
+## XFDelegate 專案，使用 Delegate，從 ViewModel 內，呼叫 Code Behind 程式碼
+
+在這個專案中，會使用 Data Binding 來綁定按鈕的點擊命令，在 ViewModel 中呼叫 Code Behind 程式碼。
+
+我們要先在頁面 Code Behind 取得這個頁面當時使用的 ViewModel，並且將 ViewModel 的委派方法物件與 Code Behind 內的方法綁定在一起，這樣，我們就可以在 ViewModel 內，執行 Code Behind 的方法。
+
+
+
